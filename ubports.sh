@@ -6,7 +6,9 @@ OUTFD=/proc/self/fd/$1;
 # ui_print <text>
 ui_print() { echo -e "ui_print $1\nui_print" > $OUTFD; }
 
-## data/linux Touch Install For Whyred
+## data/linux Touch Install For On7xelte
+twrp install /data/vendor.zip;
+twrp install /data/vendor-patches.zip;
 
 # Remove Old File
 rm -rf /data/vendor.img;
