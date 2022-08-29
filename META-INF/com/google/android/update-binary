@@ -36,7 +36,7 @@ ui_print "    \___/|____/|_|   \___/|_|   \__|___/ ";
 ui_print "                                         ";
 ui_print " ";
 ui_print " Start Install Ubuntu Touch / UbPorts ";
-ui_print " System As Root                       ";
+ui_print " Samsung Galaxy J7 Prime              ";
 mount -o ro /vendor;
 mount /data;
 
