@@ -19,6 +19,8 @@ mkdir -p /data/ubuntu;
 # Mount *.img to Folder Mount
 mount /data/ubuntu.img /data/ubuntu;
 
+cat /vendor/ueventd*.rc | grep ^/dev | sed -e 's/^\/dev\///' | awk '{printf "ACTION==\"add\", KERNEL==\"%s\", OWNER=\"%s\", GROUP=\"%s\", MODE=\"%s\"\n",$1,$3,$4,$2}' | sed -e 's/\r//' > /data/ubuntu/etc/udev/rules.d/70-exynos7870.rules
+
 # Umount All *.img
 umount /data/ubuntu;
 
